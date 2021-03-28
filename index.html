@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://cdn.onlinewebfonts.com/svg/img_208830.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Firebase | Firestore</title>
+  </head>
+  <body>
+    <h1>Cloud Lemon | Cafe</h1>
+
+    <div class="content">
+      <form id="add-cafe-form">
+        <input type="text" name="name" placeholder="Cafe Name" />
+        <input type="text" name="city" placeholder="Cafe City" />
+        <button>Add Cafe</button>
+      </form>
+
+      <ul id="cafe-list"></ul>
+    </div>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyD97QNAYzPz_PRtBj75QZLG8p8NeZ4RQLM",
+        authDomain: "fir-firestore-tut-8d94f.firebaseapp.com",
+        projectId: "fir-firestore-tut-8d94f",
+        storageBucket: "fir-firestore-tut-8d94f.appspot.com",
+        messagingSenderId: "1059139044249",
+        appId: "1:1059139044249:web:2b481dc1f62894e5984908",
+        databaseURL: "gs://fir-firestore-tut-8d94f.appspot.com",
+        projectId: "fir-firestore-tut-8d94f",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshot: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
